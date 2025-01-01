@@ -132,3 +132,114 @@ function toggleImageVisibility(shouldShowImage) {
   // yani usser taa level 15 ro complete karde va alan bayad 16 ro anjam bede 
   createProgressPath("progress-path-container", 70, 15);
 
+
+
+
+
+// Mapping between div IDs and associated image IDs
+const divButtonMap = {
+  friend: 'people',
+  topholder: 'globe',
+  leaderboard: 'trophy',
+  transactions: 'More_Vertical'
+};
+
+/**
+* Toggles the display of a specific div.
+* @param {string} divId - The ID of the div to toggle.
+*/
+function toggleDiv(divId) {
+  const targetDiv = document.getElementById(divId);
+  // Toggle the `display` style between 'block' and 'none'
+  targetDiv.style.display = targetDiv.style.display === 'block' ? 'none' : 'block';
+}
+
+/**
+ * Updates the image source of a button when a div's visibility changes.
+ * @param {HTMLElement} div - The div whose class has changed.
+ */
+function handleDisplayChange(div) {
+  const divId = div.id; // Get the ID of the div
+  const buttonImageId = divButtonMap[divId]; // Find the associated button image ID
+  const buttonImage = document.getElementById(buttonImageId); // Access the associated image element
+
+  // Check if the div has the "active" class
+  const isActive = div.classList.contains('active');
+
+  if (isActive) {
+      const newSrc = `./static/icons/new-${buttonImageId}.svg`;
+      buttonImage.src = newSrc; // Change to the new image
+      console.log(`Div "${divId}" is active. Updated "${buttonImageId}" image to: ${newSrc}`);
+  } else {
+      const originalSrc = `./static/icons/original-${buttonImageId}.svg`;
+      buttonImage.src = originalSrc; // Revert to the original image
+      console.log(`Div "${divId}" is not active. Reverted "${buttonImageId}" image to: ${originalSrc}`);
+  }
+}
+
+/**
+* Sets up MutationObservers for all relevant divs to monitor style changes.
+* Observes changes to the `style` attribute and triggers `handleDisplayChange`.
+*/
+document.addEventListener('DOMContentLoaded', () => {
+  const targetDivIds = Object.keys(divButtonMap); // Get all div IDs from the mapping
+
+  // Iterate over each divId in the mapping
+  targetDivIds.forEach((divId) => {
+      const div = document.getElementById(divId); // Get the div element by ID
+
+      if (div) {
+          // Create a MutationObserver for the div
+          const observer = new MutationObserver((mutationsList) => {
+              mutationsList.forEach((mutation) => {
+                  if (mutation.attributeName === 'class') {
+                      console.log(`Class mutation observed for div: ${div.id}`);
+                      handleDisplayChange(div);
+                  }
+              });
+          });
+
+          // Start observing the div for changes to its `class` attribute
+          observer.observe(div, { attributes: true, attributeFilter: ['class'] });
+      } else {
+          console.warn(`No element found with ID: ${divId}`);
+      }
+  });
+});
+
+
+
+
+const lists = [
+  [['Anna Tailor anan1','Decemeber 04','234'],['Anna Tailor1','Decemeber 04','234'],['Anna Tailor1','Decemeber 04','234'],['Anna Tailor1','Decemeber 04','234']],
+  [['Anna Tailor2','Decemeber 04','234'],['Anna Tailor moham2','Decemeber 04','234'],['Anna','Decemeber 04','234']],
+  [['Anna TailorT','Decemeber 04','234']]
+];
+
+function changeList(listNumber) {
+  // Update button styles
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(button => {
+    button.classList.remove('active');
+  });
+
+  document.getElementById(`btn${listNumber}`).classList.add('active');
+
+  // Update the displayed list with divs
+  const listContainer = document.getElementById('listContainer');
+  const list = lists[listNumber - 1];  // Adjusting for 0-based index
+  listContainer.innerHTML = list.map(item => 
+    `<div class="list-item">
+    <div style="display: flex; flex-direction: row; white-space: nowrap;">
+    <img src="./static/icons/original-people.svg" alt="" style="transform: scale(0.5)">
+
+    <p style="padding-left: -50px;">${item[0]}<br><span class="span-in-item">Joined on ${item[1]}</span></p>
+    </div>
+    <p>${item[2]} PYM</p>
+
+    </div>`
+  ).join('');
+}
+
+// Set default active button and list (level 1)
+changeList(1);

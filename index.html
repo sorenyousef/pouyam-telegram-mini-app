@@ -23,23 +23,18 @@
         <p style="text-align: center; font-size: 13px; ">Amazing Boy<br> 1000 points</p>
         <img id="conditionalimage" src="./static/icons/Wavy_Check.svg" alt="">
         <p style="color: rgb(67, 209, 114, 1)">60 DAY</p>
-        <button class="top-buttons"><img src="./static/icons/people.svg" alt=""></button>
-        <button class="top-buttons"><img src="./static/icons/Globe.svg" alt=""></button>
-        <button class="top-buttons"><img src="./static/icons/Trophy.svg" alt=""></button>
-        <button class="top-buttons"><img src="./static/icons/More_Vertical.svg" alt=""></button>
+        <button id="button1" class="top-buttons" onclick="showPage('friend')"><img src="./static/icons/original-people.svg" alt="" id="people"></button>
+        <button id="button2" class="top-buttons" onclick="showPage('topholder')"><img src="./static/icons/original-Globe.svg" alt="" id="globe"></button>
+        <button id="button3" class="top-buttons" onclick="showPage('leaderboard')"><img src="./static/icons/original-Trophy.svg" alt="" id="trophy"></button>
+        <button id="button4" class="top-buttons" onclick="showPage('transactions')"><img src="./static/icons/original-More_Vertical.svg" alt="" id="More_Vertical"></button>
         </div>
 
-    <!-- safhe aval -->
-     <div id="first-page" class="page active" onclick="showPage('home')">
-        <img src="./static/icons/logo.svg" alt="" class="logo-first">
-        <img src="./static/icons/firstpageback.png" alt="" class="back-first">
-     </div>
-     <!-- sfahe aval end -->
+
 
 
 
     <!-- home -->
-      <div id="home" class="page" style="background-color: rgba(14, 19, 28, 1); height: 190vh;     scrollbar-width: none;
+      <div id="home" class="page active" style="background-color: rgba(14, 19, 28, 1); height: 190vh;     scrollbar-width: none;
     -ms-overflow-style: none;">
 
         <img src="./static/icons/backfaded.png" alt="" class="backfaded">
@@ -211,6 +206,7 @@
     </div>
     <p style="transform: translate(-50%,-50%); left: 15%; position: absolute; top: 109%; color: white; font-size: 17px;">TON TUBE</p>
     <hr style="color: white; width: 90%; transform: translate(-50%,-50%); left: 50%; position: absolute; top: 112%;">
+    <p style="transform: translate(-50%,-50%); left: 50%; position: absolute; top: 127%; z-index: 10; color: white; font-size: 23px; font-weight: bold;">COMING SOON</p>
 
     <div class="tube-container">
         <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
@@ -433,8 +429,81 @@
       <!-- end of wallet -->
 
 
+      <!-- friend -->
+       <div id="friend" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+
+        <div style="display: flex; flex-direction: row;justify-content: space-between; width: 80%; position: absolute; transform: translate(-50%,-50%); left: 50%; top: 10%;">        <img src="./static/icons/original-people.svg" alt="" style="transform: scale(1.8);">
+        <p style="color: white; white-space: nowrap; font-size: 17px;">Invite your friends & Get PYM Token.</p>
+        </div>
+        <hr style="background-color: rgba(234, 221, 30, 1); position: absolute; transform: translate(-50%,-50%); left: 50%; top: 12%; width: 90%; border: 0; height: 2px;">
+
+        <div class="credit-info-container">
+
+          <div class="credit"><p style="height: 2px; margin-top:5px; font-size: 15px;">YOUR FRIENDS</p>
+          <div class="credit-bottom"><p>47</p><img src="./static/icons/takpro.svg" alt=""></div></div>
+
+          <div class="credit"><p style="height: 2px; margin-top:5px; font-size: 15px"> YOUR COMMISSION</p>
+          <div class="credit-bottom"><p>1200</p><img src="./static/icons/dollarsigntak.svg" alt=""></div></div>
+
+          <div class="credit"><p style="height: 2px; margin-top:5px; font-size: 15px;">Upline revenue</p>
+          <div class="credit-bottom"><p>47</p><img src="./static/icons/original-people.svg" alt=""></div></div>
+
+          <div class="credit"><p style="height: 2px; margin-top:5px; font-size: 15px">YOUR COMMISSION</p>
+          <div class="credit-bottom"><p>1200</p><img src="./static/icons/dollarsigntak.svg" alt=""></div></div>
 
 
+        </div>
+
+        <hr style="background-color: rgba(234, 221, 30, 1); position: absolute; transform: translate(-50%,-50%); left: 50%; top: 40%; width: 90%; border: 0; height: 2px;">
+
+        <div style="display: flex; flex-direction: row; justify-content: flex-start; width: 80%; position: absolute; transform: translate(-50%,-50%); left: 50%; top: 45.5%;">        <img src="./static/icons/pointer-yellow.svg" alt="" style="transform: scale(1.5);">
+          <p style="color: white;  font-size: 17px; padding-left: 20px; line-height: 0.8;">Invite Friends <br><span style="font-size: 12px; color: rgba(183, 189, 198, 1); ">SHARE YOUR INVITATION LINK & GET 10% OF FRIENDS POINT. <button style="text-decoration: none; color: white; background: none; border: none;" onclick="showPage('premium')"> More...</button></span></p>
+          </div>
+
+          <hr style="background-color: rgba(234, 221, 30, 1); position: absolute; transform: translate(-50%,-50%); left: 50%; top: 48.5%; width: 90%; border: 0; height: 2px;">
+
+
+
+          <div style="display: flex; flex-direction: column; position: absolute; top: 62.9%; left: 50%; transform: translate(-50%,-50%);">
+          <div class="buttons">
+            <button class="btn" id="btn1" onclick="changeList(1)">LvL 1</button>
+            <button class="btn" id="btn2" onclick="changeList(2)">LvL 2</button>
+            <button class="btn" id="btn3" onclick="changeList(3)">Total</button>
+          </div>
+
+          
+          <div id="listContainer">
+            <!-- The list will be inserted dynamically here -->
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: row;gap: 5px; width: 95%; transform: translate(-50%,-50%); left: 50%; bottom: 15%; position: absolute; align-items: center;">
+          <button class="button-invite">INVITE FRIENDS</button>
+          <butto  class="button-copy">COPY</button>
+        </div>
+
+          <div class="container-footer" id="footer">    
+            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home-yellow.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+        </div>
+       </div>
+       <!-- end of friend -->
+
+
+      <!-- leaderboard -->
+       <div id="leaderboard" class="page" style="background-color: rgb(255, 0, 0); width: 50px; height: 50px;"></div>
+       <!-- end of friend -->
+
+
+       <!-- topholder -->
+        <div id="topholder" class="page" style="background-color: rgb(43, 255, 0); width: 50px; height: 50px;"></div>
+        <!-- end of topholder -->
+
+        <!-- transactions -->
+         <div id="transactions" class="page" style="background-color: rgb(51, 0, 255); width: 50px; height: 50px;"></div>
 
       <!-- tube -->
        <div id="tube" class="page">
