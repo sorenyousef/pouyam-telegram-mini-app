@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POUYAM</title>
+    <link rel="stylesheet" href="./style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body>
+
+    <div class="top-info">
+        <img src="./static/icons/profile_icon.svg" alt="">
+        <p style="text-align: center; font-size: 13px; ">Amazing Boy<br> 1000 points</p>
+        <img id="conditionalimage" src="./static/icons/Wavy_Check.svg" alt="">
+        <p style="color: rgb(67, 209, 114, 1)">60 DAY</p>
+        <button class="top-buttons"><img src="./static/icons/people.svg" alt=""></button>
+        <button class="top-buttons"><img src="./static/icons/Globe.svg" alt=""></button>
+        <button class="top-buttons"><img src="./static/icons/Trophy.svg" alt=""></button>
+        <button class="top-buttons"><img src="./static/icons/More_Vertical.svg" alt=""></button>
+        </div>
+
+    <!-- safhe aval -->
+     <div id="first-page" class="page active" onclick="showPage('home')">
+        <img src="./static/icons/logo.svg" alt="" class="logo-first">
+        <img src="./static/icons/firstpageback.png" alt="" class="back-first">
+     </div>
+     <!-- sfahe aval end -->
+
+
+
+    <!-- home -->
+      <div id="home" class="page" style="background-color: rgba(14, 19, 28, 1); height: 190vh;">
+
+        <img src="./static/icons/backfaded.png" alt="" class="backfaded">
+
+
+
+
+
+
+        <div class="get-premium">
+            <p style="padding-left: 10px; color: white;">GET PREMIUM</p>
+            <button class="access-button" onclick="showPage('premium')">GET Access</button>
+        </div>
+
+        <div class="container-info">
+
+            <div class="info">TOTAL USERS <br> 231500</div>
+            <div class="info">YOUR INCOME <br>100$</div>
+            <div class="info">AIM FUND <br>2350$</div>
+
+        </div>
+
+      <!-- <img src="./static/icons/Rectangle 39945.png" alt="" style="position: absolute; transform: translate(-50%,-50%); left: 50%; top: 35%;"> -->
+
+       <div class="coin-container">
+      <img src="./static/icons/logo.svg" alt="" style="transform: scale(0.8);">
+        <p class="points">54000</p>
+    
+
+            <button class="boost-button" onclick="showPage('boost')">
+                BOOST YOUR SCORE >
+            </button> 
+        </div>
+
+        <p style="transform: translate(-50%,-50%); left: 22%; position: absolute; top: 87%; color: white; font-size: 17px;">CRYPTO MARKET</p>
+        <hr style="color: white; width: 90%; transform: translate(-50%,-50%); left: 50%; position: absolute; top: 90%;">
+
+        <div style="position: absolute; top: 99.5%; width: 98%; overflow-x: hidden; transform: translate(-50%,-50%); left: 50%;">
+
+        <div class="container-market">
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">BTC</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$4</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        -100%
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">ETH</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$10</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        -1%
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">BTC</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$40000</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        -23%
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">BTC</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$0.00001</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        -5%
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">BTC</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$4</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        -56%
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">BTC</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$4</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        100%
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="market-display">
+
+                <div class="display-top">
+                    <img src="./static/icons/coin-icon.svg" alt="">
+                    <p style="padding-left: 20px;">BTC</p>
+                    <a href="google.com" style="-webkit-text-fill-color: transparent;">
+                    <img src="./static/icons/see-more3.png" alt=""  style="padding-left:0px; margin-left: -5px;"></a>
+                </div>
+
+                <div class="display-bottom">
+                    <p>$4</p>
+                    <div style="background-color: rgba(210, 61, 57, 1); padding: 5px; border-radius: 15px;  text-align: center; height: 12px; font-size: 12px; margin-right: 5px; ">
+                        -100%
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <p style="transform: translate(-50%,-50%); left: 15%; position: absolute; top: 109%; color: white; font-size: 17px;">TON TUBE</p>
+    <hr style="color: white; width: 90%; transform: translate(-50%,-50%); left: 50%; position: absolute; top: 112%;">
+
+    <div class="tube-container">
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+        <div class="tube-item"><img src="./static/icons/yuotubeicon.svg" alt=""></div>
+    </div>
+    <a href="https://google.com" style="color: white; text-decoration: none; position: absolute; top: 146%; right: 4%; opacity: 0.6; ">Watch More ></a>
+
+    <p style="transform: translate(-50%,-50%); left: 22%; position: absolute; top: 150%; color: white; font-size: 17px;">TOP PYM HOLDER</p>
+    <hr style="color: white; width: 90%; transform: translate(-50%,-50%); left: 50%; position: absolute; top: 154%;">
+
+    <div class="pym-top">
+    <div class="profiles-container">
+        
+
+        <div class="profile-card">
+            <div class="profile-info">
+              <div class="opal">
+                <div class="profile-image">
+                    <img src="./static/icons/profile.png" alt="Profile Image">
+                  </div>
+                <div class="text-container">
+                  <div class="name-and-pym">
+                    <span class="name">gemma chan</span>
+                    <span class="pym">23000 PYM</span>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="points-user">1000 point</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="profile-card">
+
+            <div class="profile-info">
+              <div class="opal">
+                <div class="profile-image">
+                    <img src="./static/icons/profile.png" alt="Profile Image">
+                  </div>
+                <div class="text-container">
+                  <div class="name-and-pym">
+                    <span class="name">Richard</span>
+                    <span class="pym">23000 PYM</span>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="points-user">1000 point</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="profile-card">
+
+            <div class="profile-info">
+              <div class="opal">
+                <div class="profile-image">
+                    <img src="./static/icons/profile.png" alt="Profile Image">
+                  </div>
+                <div class="text-container">
+                  <div class="name-and-pym">
+                    <span class="name">anjelina jollie</span>
+                    <span class="pym">23000 PYM</span>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="points-user">1000 point</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="profile-card">
+
+            <div class="profile-info">
+              <div class="opal">
+                <div class="profile-image">
+                    <img src="./static/icons/profile.png" alt="Profile Image">
+                  </div>
+                <div class="text-container">
+                  <div class="name-and-pym">
+                    <span class="name">Richard Madden
+                        <img src="./static/icons/Wavy_Check.svg" alt="" style="transform: scale(0.6) translate(50%,50%);">
+                    </span>
+                    <span class="pym">23000 PYM </span>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="points-user">1000 point</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="profile-card">
+
+            <div class="profile-info">
+              <div class="opal">
+                <div class="profile-image">
+                    <img src="./static/icons/profile.png" alt="Profile Image">
+                  </div>
+                <div class="text-container">
+                  <div class="name-and-pym">
+                    <span class="name">Richard Madden</span>
+                    <span class="pym">23000 PYM</span>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="points-user">1000 point</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </div>
+</div>
+
+    <div class="time-left">
+59:21:21:00
+    </div>
+
+
+    <div class="container-footer" id="footer">    
+        <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home-yellow.svg" alt=""></button>
+        <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+        <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+        <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+        <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+    </div>
+
+      </div> 
+    <!-- end of home -->
+
+
+
+
+
+    <!-- points  -->
+     <div id="points" class="page">
+
+        <div class="container-footer" id="footer">    
+            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic_yellow.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+        </div>
+     </div>
+     <!-- end of points -->
+
+
+
+
+     <!-- path -->
+      <div id="path" class="page">
+        
+
+        <div id="progress-path-container"></div>
+
+
+
+        <div class="container-footer" id="footer">    
+            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path_yellow.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+        </div>
+      </div>
+      <!-- end of path -->
+
+
+
+
+
+      <!-- wallet -->
+      <div id="wallet" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+        <!-- <img src="./static/icons/backfaded.png" alt="" class="backfaded2"> -->
+
+
+                <p style="color: white; position: fixed; transform: translate(-50%,-50%); top: 50%; left: 50%; text-align: center; font-size: 25px;">COMING SOON <br> ANIMATION</p>
+
+
+
+        <div class="container-footer" id="footer">    
+            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet_yellow.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+        </div>
+      </div>
+      <!-- end of wallet -->
+
+
+
+
+
+      <!-- tube -->
+       <div id="tube" class="page">
+
+
+
+        <div class="container-footer" id="footer">    
+            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube_yellow.svg" alt=""></button>
+        </div>
+       </div>
+      <!-- end of tube -->
+
+      <!-- premium -->
+       <div id="premium" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+
+        <img src="./static/icons/Wavy_Check.svg" alt="" style="transform: scale(2) translate(-50%,-50%); position: fixed; top: 13%; left: 55%;">
+
+        <div class="container-premium-info">
+
+            <div class="list-premium">
+                <img src="./static/icons/cash.svg" alt="">
+                <div>  1. Triple Rewards (3X Points) <br> <span class="span-list">Premium users earn 3X points on all activities and transactions, accelerating their progress and unlocking exclusive rewards faster.</span></div>
+  
+            </div>
+
+            <div class="list-premium">
+                <img src="./static/icons/dollarsign.svg" alt="">
+                <div>2. Exclusive Badge & Full Access <br> <span class="span-list">Enjoy a green badge next to your name, showcasing your premium status. Additionally, gain 6 months of unlimited access to all advanced features of the platform</span></div>
+ 
+            </div>
+
+            <div class="list-premium">
+                <img src="./static/icons/X2.svg" alt="" style="transform: scale(1.2);">
+                <div>3. Enhanced Marketing Commissions <br> <span class="span-list">Earn 40% direct commission from your referrals (compared to 20% for standard users)
+                    Get 10% second-level commission from your referrals network.</span></div>
+
+            </div>
+
+            <div class="list-premium">
+                <img src="./static/icons/youtube.svg" alt="">
+                <div> 4. Access to Pouyam Tube <br> <span class="span-list">Premium users can create and publish video content through Pouyam Tube, engaging with the community and expanding their influence.</span></div>
+
+            </div>
+
+            <div class="list-premium">
+                <img src="./static/icons/radio.svg" alt="">
+                <div>5. Monthly Airdrops <br><span class="span-list">Receive monthly airdrops from the Pouyam Fund, exclusively distributed among premium members</span></div>
+
+            </div>
+
+            
+
+
+        </div>
+
+<button class="get-premium-button">GET PREMIUM</button>
+
+        <div class="container-footer" id="footer">    
+            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+        </div>
+       </div>
+       <!-- end of premium -->
+
+      <script  src="./script.js"></script>
+
+ 
+
+</body>
+</html>
