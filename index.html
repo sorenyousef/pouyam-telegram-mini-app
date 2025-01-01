@@ -39,7 +39,8 @@
 
 
     <!-- home -->
-      <div id="home" class="page" style="background-color: rgba(14, 19, 28, 1); height: 190vh;">
+      <div id="home" class="page" style="background-color: rgba(14, 19, 28, 1); height: 190vh;     scrollbar-width: none;
+    -ms-overflow-style: none;">
 
         <img src="./static/icons/backfaded.png" alt="" class="backfaded">
 
@@ -372,13 +373,31 @@
 
 
 
-     <!-- path -->
-      <div id="path" class="page">
+     <!-- path --> 
+      <div id="path" class="page" style=" overflow: hidden; background-color: rgba(14, 19, 28, 1); height: 250vh;">
+
+        <img src="./static/icons/misile.svg" alt="" class="misile">
+
+        <img src="./static/icons/vectors.png" alt="" style="opacity: 40%; width: 90%; width: 450px; top: 20%;">
         
 
         <div id="progress-path-container"></div>
+        <img src="./static/icons/falg.svg" alt="" style="position: absolute; left: 50%; top: 218%; z-index: 6;">
 
+        <img src="./static/icons/pymcoinbottom.png" alt="" style="position: absolute; top: 240%; transform: translate(-50%,-50%); left: 50%; overflow: hidden; width: 100%;">
 
+        <div class="container-path">
+        <div class="div-path">
+          <img src="./static/icons/questionmark.svg" alt="">
+          <p style="  color: white;">NEXT LEVEL</p>
+          <button class="path-buttons">GET</button>
+        </div>
+        <div class="div-path">
+          <img src="./static/icons/pymlogolil.svg" alt="">
+          <p style="  color: white;">54,000 PYM</p>
+          <button class="path-buttons">CLAIM</button>
+        </div>
+      </div>
 
         <div class="container-footer" id="footer">    
             <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>

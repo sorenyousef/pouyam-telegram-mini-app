@@ -32,6 +32,8 @@ function toggleImageVisibility(shouldShowImage) {
 
 
 
+  
+
 
   const createProgressPath = (containerId, totalLevels, currentLevel) => {
     const container = document.getElementById(containerId);
@@ -95,21 +97,28 @@ function toggleImageVisibility(shouldShowImage) {
       circle.setAttribute("cx", point.x);
       circle.setAttribute("cy", point.y);
       circle.setAttribute("r", nodeRadius);
-
-      const fillColor =
-        index < currentLevel
-          ? "rgba(136, 248, 35, 1)" // Green for completed levels
-          : index === currentLevel
-          ? "rgba(234, 221, 30, 1)" // Yellow for current level
-          : "rgb(156, 163, 175)"; // Gray for upcoming levels;
-      circle.setAttribute("fill", fillColor);
+    
+      if (index < currentLevel) {
+        // Completed levels (filled green)
+        circle.setAttribute("fill", "rgb(34, 197, 94)"); // Green
+        circle.setAttribute("stroke", "none"); // No border
+      } else if (index === currentLevel) {
+        // Current level (filled yellow)
+        circle.setAttribute("fill", "rgb(234, 179, 8)"); // Yellow
+        circle.setAttribute("stroke", "none"); // No border
+      } else {
+        // Upcoming levels (gray border only)
+        circle.setAttribute("fill", "rgba(14, 19, 28, 1)"); // No fill
+        circle.setAttribute("stroke", "rgb(156, 163, 175)"); // Gray border
+        circle.setAttribute("stroke-width", "2"); // Border width
+      }
 
       // Add text label
       const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
       text.setAttribute("x", point.x);
       text.setAttribute("y", point.y);
       text.textContent = index + 1;
-
+    
       svg.appendChild(circle);
       svg.appendChild(text);
     });
@@ -118,6 +127,8 @@ function toggleImageVisibility(shouldShowImage) {
     container.appendChild(svg);
   };
 
-  // Initialize the progress path
+
+
+  // yani usser taa level 15 ro complete karde va alan bayad 16 ro anjam bede 
   createProgressPath("progress-path-container", 70, 15);
 

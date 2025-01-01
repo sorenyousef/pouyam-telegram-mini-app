@@ -2,6 +2,9 @@ body {
     font-family: poppins;
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
 }
 a,
 a:focus, 
@@ -128,6 +131,19 @@ z-index: 1;
   overflow: hidden;
   position: fixed;
   z-index: -1;
+}
+#path {
+  background-image: url(./static/icons/backstarts.png);
+  z-index: 1;
+  background-size: cover;
+  
+  width: 100%;
+  height: 1900px;
+  background-position: center;
+  background-repeat: repeat-y;
+  margin: 0;
+  padding: 0;
+
 }
 
 #premium {
@@ -439,7 +455,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     flex-direction: row;
     gap: 15px;
     justify-content: space-between;
-    width: 101%;
+    width: 100.2%;
     justify-content: center;
     align-items: center;
     border-radius: 20px 20px 0 0;
@@ -503,16 +519,24 @@ padding: 15px;
 .get-premium-button:active {
   transform:  scale(0.99); /* Simulates button press */
 }
+.misile {
+  position: absolute;
+  width: 350px;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 20%;
+  z-index: 2;
+}
 
 #progress-path-container {
-  width: 98%;
-  height: 600px;
-  border: 1px solid #ddd;
-  background-color: white;
+  background: transparent;
+  width: 90%;
   overflow: auto;
-  position: relative;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 135%;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 svg {
@@ -530,4 +554,47 @@ text {
   fill: white;
   text-anchor: middle;
   dominant-baseline: middle;
+}
+.container-path {
+  color: white;
+  width: 85%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 250%;
+   gap: 20px;
+}
+
+.div-path {
+  text-align: center;
+  font-size: 17px;
+
+  font-weight: bold;
+  height: 40px;
+  border: solid rgba(234, 221, 30, 1) 2px;
+  border-radius: 15px;
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  z-index: 5;
+  padding-left: 5px;
+
+}
+.path-buttons {
+  background-color: rgba(234, 221, 30, 1);
+  border: none;
+  width: 100px;
+  height: 25px;
+border-radius: 15px;
+margin-right: 5px;
+outline: none;
+}
+
+.path-buttons:active {
+  transform: translateY(2px) scale(0.95); /* Simulates button press */
 }
