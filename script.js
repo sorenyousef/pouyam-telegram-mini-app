@@ -208,6 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+function openLink(url) {
+  window.location.href = url;
+}
 
 
 const lists = [
@@ -243,3 +246,33 @@ function changeList(listNumber) {
 
 // Set default active button and list (level 1)
 changeList(1);
+
+
+
+
+            // گرفتن عناصر مورد نیاز
+            const openPopupButton = document.getElementById('open-popup');
+            const popupOverlay = document.getElementById('popup-overlay');
+            const popupContainer = document.getElementById('popup-container');
+        
+            // نمایش پاپ‌آپ
+            openPopupButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.classList.add('popup-active'); // اضافه کردن کلاس برای غیرفعال کردن اسکرول
+                popupOverlay.style.display = 'block';
+                popupContainer.style.display = 'block';
+            });
+        
+            // بستن پاپ‌آپ هنگام کلیک روی پس‌زمینه تاریک
+            popupOverlay.addEventListener('click', () => {
+                document.body.classList.remove('popup-active'); // حذف کلاس برای فعال کردن اسکرول
+                popupOverlay.style.display = 'none';
+                popupContainer.style.display = 'none';
+            });
+        
+            // بستن پاپ‌آپ هنگام کلیک روی لینک داخل پاپ‌آپ (اختیاری)
+            document.getElementById('close-popup').addEventListener('click', () => {
+                document.body.classList.remove('popup-active');
+                popupOverlay.style.display = 'none';
+                popupContainer.style.display = 'none';
+            });
