@@ -13,26 +13,27 @@
 </head>
 <body>
 
-    <div class="top-info">
+  <div class="top-info">
         <img src="./static/icons/profile_icon.svg" alt="">
         <p style="text-align: left; font-size: 13px; ">Amazing Boy<br> 1000 points</p>
         <img id="conditionalimage" src="./static/icons/Wavy_Check.svg" alt="">
         <p style="color: rgb(67, 209, 114, 1)">60 DAY</p>
+        <div style="display: flex; flex-direction: row; gap: 0;">
         <button id="button1" class="top-buttons" onclick="showPage('friend')"><img src="./static/icons/original-people.svg" alt="" id="people"></button>
         <button id="button2" class="top-buttons" onclick="showPage('topholder')"><img src="./static/icons/original-Globe.svg" alt="" id="globe"></button>
         <button id="button3" class="top-buttons" onclick="showPage('leaderboard')"><img src="./static/icons/original-Trophy.svg" alt="" id="trophy"></button>
-        <button id="button4" class="top-buttons" onclick="showPage('transactions')"><img src="./static/icons/original-More_Vertical.svg" alt="" id="More_Vertical"></button>
-        </div>
+        <button id="button4" class="top-buttons" onclick="showPage('transactions')"><img src="./static/icons/original-More_Vertical.svg" alt="" id="More_Vertical"></button></div>
+  </div>
 
 
 
 
 
     <!-- home -->
-      <div id="home" class="page active" style="background-color: rgba(14, 19, 28, 1); height: 190vh;     scrollbar-width: none;
+  <div id="home" class="page active" style="background-color: rgba(14, 19, 28, 1); height: 190vh;     scrollbar-width: none;
     -ms-overflow-style: none;">
 
-        <img src="./static/icons/backfaded.png" alt="" class="backfaded">
+      <img src="./static/icons/backfaded.png" alt="" class="backfaded">
 
 
 
@@ -341,7 +342,7 @@
         <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
     </div>
 
-      </div> 
+  </div> 
     <!-- end of home -->
 
 
@@ -349,7 +350,30 @@
 
 
     <!-- points  -->
-     <div id="points" class="page">
+  <div id="points" class="page" style="height: 95vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+
+    <img src="./static/icons/points-misile.svg" alt="" style="position: fixed; top: 10%; left: 20%;">
+    <p style="color: white; position: fixed; top: 10%; left: 32%; font-size: 25px;">Get More PYM</p>
+
+
+    <div style="display: flex; flex-direction: row; position: fixed; transform: translate(-50%,-50%); left: 50%; top: 25%; gap: 7px;">
+      <button id="button-daily" class="daily">DAILY</button>
+      <button id="button-partners" class="partners">PARTNERS</button>
+  </div>
+
+  <div class="container-daily" id="container-daily">
+    <div class="item-daily"><p>JOIN TO PYM COMMUNITY <br>GET 100 point</p><button class="daily-button">DO</button></div>
+    <div class="item-daily"><p>JOIN TO PYM COMMUNITY <br>GET 100 point</p><p style="padding-right: 7px;">DONE</p></div>
+    <div class="item-daily"><p>JOIN TO PYM COMMUNITY <br>GET 100 point</p><button class="daily-button">DO</button></div>
+    <div class="item-daily"><p>JOIN TO PYM COMMUNITY <br>GET 100 point</p><button class="daily-button">DO</button></div>
+  </div>
+
+  <div class="container-partners" id="container-partners">
+    <div class="item-daily"><p>JOIN <br>GET 100 point</p><button class="daily-button">DO</button></div>
+    <div class="item-daily"><p>JOIN <br>GET 100 point</p><p style="padding-right: 7px;">DONE</p></div>
+    <div class="item-daily"><p>JOIN <br>GET 100 point</p><button class="daily-button">DO</button></div>
+    <div class="item-daily"><p>JOIN <br>GET 100 point</p><button class="daily-button">DO</button></div>
+  </div>
 
         <div class="container-footer" id="footer">    
             <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
@@ -358,14 +382,14 @@
             <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
             <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
         </div>
-     </div>
+  </div>
      <!-- end of points -->
 
 
 
 
      <!-- path --> 
-      <div id="path" class="page" style=" overflow: hidden; background-color: rgba(14, 19, 28, 1); height: 250vh;">
+  <div id="path" class="page" style=" overflow: hidden; background-color: rgba(14, 19, 28, 1); height: 250vh;">
 
         <img src="./static/icons/misile.svg" alt="" class="misile">
 
@@ -397,7 +421,7 @@
             <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
             <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
         </div>
-      </div>
+  </div>
       <!-- end of path -->
 
 
@@ -405,7 +429,7 @@
 
 
       <!-- wallet -->
-      <div id="wallet" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+  <div id="wallet" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
         <!-- <img src="./static/icons/backfaded.png" alt="" class="backfaded2"> -->
 
 
@@ -420,12 +444,12 @@
             <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet_yellow.svg" alt=""></button>
             <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
         </div>
-      </div>
+  </div>
       <!-- end of wallet -->
 
 
       <!-- friend -->
-       <div id="friend" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+  <div id="friend" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
 
         <div style="display: flex; flex-direction: row;justify-content: space-between; width: 80%; position: absolute; transform: translate(-50%,-50%); left: 50%; top: 10%;">        <img src="./static/icons/original-people.svg" alt="" style="transform: scale(1.8);">
         <p style="color: white; white-space: nowrap; font-size: 17px;">Invite your friends & Get PYM Token.</p>
@@ -497,19 +521,19 @@
             </div>
         
         </div>
-          <div class="container-footer" id="footer">    
-            <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home-yellow.svg" alt=""></button>
-            <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
-            <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
-            <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
-            <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
-        </div>
-       </div>
+        <div class="container-footer" id="footer">    
+          <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+          <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+          <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+          <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+          <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+      </div>
+  </div>
        <!-- end of friend -->
 
 
       <!-- leaderboard -->
-       <div id="leaderboard" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+  <div id="leaderboard" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
 
 
         <img src="./static/icons/trophy-leaderboard.svg" alt="" style="transform: translate(-50%,-50%); position: absolute; left: 50%; top: 15%; ">
@@ -644,25 +668,160 @@
         </div>
 
         <div class="container-footer" id="footer">    
-          <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home-yellow.svg" alt=""></button>
+          <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
           <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
           <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
           <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
           <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
       </div>
-       </div>
+  </div>
       <!-- end of friend -->
 
 
        <!-- topholder -->
-        <div id="topholder" class="page" style="background-color: rgb(43, 255, 0); width: 50px; height: 50px;"></div>
+  <div id="topholder" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+
+
+
+    <img src="./static/icons/trophy-leaderboard.svg" alt="" style="transform: translate(-50%,-50%); position: absolute; left: 50%; top: 15%; ">
+    <p style="transform: translate(-50%,-50%); position: absolute; left: 50%; top: 20%; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; ">TOP HOLDER PYM<img src="./static/icons/pymblackback.svg" alt="" style="transform: scale(0.8); margin-bottom: 5px;"></p>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between; width: 85%;background-color: rgba(249, 194, 2, 1); color: black; border-radius: 15px; padding-left: 7px;padding-right: 7px;line-height: 20px; height: 50px; font-weight: 700; transform: translate(-50%,-50%); left: 50%; top: 30%; position: absolute;">
+      <p>Amazing Boy</p>
+      <P>#234991</P>
+    </div>
+
+
+    
+    <div class="container-leaderboard">
+
+      
+      <div class="container-list-item">
+      <div class="list-item2">
+        <div style="display: flex; flex-direction: row; white-space: nowrap;">
+        <p style="padding-left: 15px;">Anna tailor<br><span class="span-in-item2">35004</span></p>
+        </div>
+        <p>#1</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item2">
+        <div style="display: flex; flex-direction: row; white-space: nowrap;">
+        <p style="padding-left: 15px;">Anna tailor<br><span class="span-in-item2">35004</span></p>
+        </div>
+        <p>#1</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item2">
+        <div style="display: flex; flex-direction: row; white-space: nowrap;">
+        <p style="padding-left: 15px;">Anna tailor<br><span class="span-in-item2">35004</span></p>
+        </div>
+        <p>#1</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item2">
+        <div style="display: flex; flex-direction: row; white-space: nowrap;">
+        <p style="padding-left: 15px;">Anna tailor<br><span class="span-in-item2">35004</span></p>
+        </div>
+        <p>#1</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item2">
+        <div style="display: flex; flex-direction: row; white-space: nowrap;">
+        <p style="padding-left: 15px;">Anna tailor<br><span class="span-in-item2">35004</span></p>
+        </div>
+        <p>#1</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+
+    </div>
+
+
+    <div class="container-footer" id="footer">    
+      <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+  </div>
+  </div>
       <!-- end of topholder -->
 
         <!-- transactions -->
-         <div id="transactions" class="page" style="background-color: rgb(51, 0, 255); width: 50px; height: 50px;"></div>
+  <div id="transactions" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+
+    <div style="display: flex; flex-direction: row; justify-content: center; width: 85%;background-color: rgba(249, 194, 2, 1); color: black; border-radius: 15px; padding-left: 7px;padding-right: 7px;line-height: 20px; height: 50px; font-weight: 700; transform: translate(-50%,-50%); left: 50%; top: 15%; position: absolute;">
+      <p>YOUR TRANSCTIONS</p>
+
+    </div>
+
+
+    
+    <div class="container-leaderboard2">
+
+
+
+      <div class="container-list-item">
+      <div class="list-item3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>2300</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>2300</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>2300</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>2300</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+      <div class="container-list-item">
+      <div class="list-item3">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>2300</p>
+        </div>
+        <hr  class="style-hr">
+      </div>
+
+
+
+
+    </div>
+
+    <div class="container-footer" id="footer">    
+      <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+      <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+  </div>
+
+  </div>
 
       <!-- tube -->
-       <div id="tube" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+  <div id="tube" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
         <p style="color: white; transform: translate(-50%,-50%); left: 50%; position: absolute; top:8%; font-weight: 600;">TOP TUBERS</p>
         <hr style="background-color: rgba(234, 221, 30, 1); position: absolute; transform: translate(-50%,-50%); left: 50%; top: 11%; width: 90%; border: 0; height: 2px;">
 
@@ -734,11 +893,11 @@
             <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
             <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube_yellow.svg" alt=""></button>
         </div>
-       </div>
+  </div>
       <!-- end of tube -->
 
       <!-- premium -->
-       <div id="premium" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+  <div id="premium" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
 
         <img src="./static/icons/Wavy_Check.svg" alt="" style="transform: scale(2) translate(-50%,-50%); position: fixed; top: 13%; left: 55%;">
 
@@ -789,12 +948,39 @@
             <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
             <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
         </div>
-       </div>
+  </div>
        <!-- end of premium -->
 
-      <script  src="./script.js"></script>
+       <!-- boost -->
+<div id="boost" class="page" style="height: 100vh; overflow: hidden; background-color: rgba(14, 19, 28, 1);">
+  <p style="color: white; font-size: 17px; position: fixed; left: 5%; top: 7%;"> POUYAM Coin Pre-Sale 
+  </p>
+  <p style="color: white; position: fixed; left: 5%; top: 11%;">Own the future at the lowest price.Exclusive benefits await.Limited time—join now!</p>
 
- 
 
+
+  <div style="display: flex; flex-direction: column; position: fixed; transform: translate(-50%,-50%); left: 50%; top: 50%;width: 95%;padding: 0; color: white; gap: 5px;">
+
+    <div class="row-coin"><div class="left-coin"><img src="./static/icons/coin50.png" alt="" style="transform: scale(0.8);"><p style="margin-left: -35px;">50 PYM </p></div><p>20$</p></div>
+    <div class="row-coin"><div class="left-coin"><img src="./static/icons/coin100.png" alt="" style="transform: scale(0.8);"><p style="margin-left: -35px;">100 PYM</p></div><p>40$</p></div>
+    <div class="row-coin"><div class="left-coin"><img src="./static/icons/coin250.png" alt="" style="transform: scale(0.8);"><p style="margin-left: -35px;">250 PYM</p></div><p>100$</p></div>
+    <div class="row-coin"><div class="left-coin"><img src="" alt=""><p style="padding-left: 150px;">500 PYM</p></div><p>200$</p></div>
+
+  </div>
+  <p style="position: fixed; left: 5%; top: 77.5%; color: white; font-size: 15px; opacity: 70%;">PRESALE PRICE : 0.40$</p>
+  <button class="get-premium-button" style="top: 86%;">GET PREMIUM</button>
+
+  <div class="container-footer" id="footer">    
+    <button class="footer-button" onclick="showPage('home')"><img src="./static/icons/home.svg" alt=""></button>
+    <button class="footer-button" onclick="showPage('points')"><img src="./static/icons/ballistic.svg" alt=""></button>
+    <button class="footer-button" onclick="showPage('path')"><img src="./static/icons/path.svg" alt=""></button>
+    <button class="footer-button" onclick="showPage('wallet')"><img src="./static/icons/wallet.svg" alt=""></button>
+    <button class="footer-button" onclick="showPage('tube')"><img src="./static/icons/tube.svg" alt=""></button>
+</div>
+</div>
+<!-- end of boost -->
+
+
+<script  src="./script.js"></script>
 </body>
 </html>

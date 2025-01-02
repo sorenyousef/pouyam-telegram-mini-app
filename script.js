@@ -1,11 +1,10 @@
 
 
-
+// page navigator
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-    
+    document.getElementById(pageId).classList.add('active'); 
 }
 
   // Function to show or hide the check icon abi
@@ -16,10 +15,7 @@ function toggleImageVisibility(shouldShowImage) {
     } else {
       image.style.display = 'none'; // Hide the image
     }
-
-
   }
-  
   // Example usage
   toggleImageVisibility(true); // Show the image
   // toggleImageVisibility(false); // Hide the image
@@ -34,7 +30,7 @@ function toggleImageVisibility(shouldShowImage) {
 
   
 
-
+// function to create the path
   const createProgressPath = (containerId, totalLevels, currentLevel) => {
     const container = document.getElementById(containerId);
 
@@ -127,14 +123,12 @@ function toggleImageVisibility(shouldShowImage) {
     container.appendChild(svg);
   };
 
-
-
   // yani usser taa level 15 ro complete karde va alan bayad 16 ro anjam bede 
   createProgressPath("progress-path-container", 70, 15);
 
 
 
-
+// functions to handle the top menu icons change 
 
 // Mapping between div IDs and associated image IDs
 const divButtonMap = {
@@ -169,11 +163,11 @@ function handleDisplayChange(div) {
   if (isActive) {
       const newSrc = `./static/icons/new-${buttonImageId}.svg`;
       buttonImage.src = newSrc; // Change to the new image
-      console.log(`Div "${divId}" is active. Updated "${buttonImageId}" image to: ${newSrc}`);
+      // console.log(`Div "${divId}" is active. Updated "${buttonImageId}" image to: ${newSrc}`);
   } else {
       const originalSrc = `./static/icons/original-${buttonImageId}.svg`;
       buttonImage.src = originalSrc; // Revert to the original image
-      console.log(`Div "${divId}" is not active. Reverted "${buttonImageId}" image to: ${originalSrc}`);
+      // console.log(`Div "${divId}" is not active. Reverted "${buttonImageId}" image to: ${originalSrc}`);
   }
 }
 
@@ -207,12 +201,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
+// functions to open youtube links and such
 function openLink(url) {
   window.location.href = url;
 }
 
 
+// functions to change the iems of the friends list
 const lists = [
   [['Anna Tailor anan1','Decemeber 04','234'],['Anna Tailor1','Decemeber 04','234'],['Anna Tailor1','Decemeber 04','234'],['Anna Tailor1','Decemeber 04','234']],
   [['Anna Tailor2','Decemeber 04','234'],['Anna Tailor moham2','Decemeber 04','234'],['Anna','Decemeber 04','234']],
@@ -249,7 +244,7 @@ changeList(1);
 
 
 
-
+// functions to show or close popup
             // گرفتن عناصر مورد نیاز
             const openPopupButton = document.getElementById('open-popup');
             const popupOverlay = document.getElementById('popup-overlay');
@@ -270,9 +265,42 @@ changeList(1);
                 popupContainer.style.display = 'none';
             });
         
-            // بستن پاپ‌آپ هنگام کلیک روی لینک داخل پاپ‌آپ (اختیاری)
-            document.getElementById('close-popup').addEventListener('click', () => {
-                document.body.classList.remove('popup-active');
-                popupOverlay.style.display = 'none';
-                popupContainer.style.display = 'none';
-            });
+            // // بستن پاپ‌آپ هنگام کلیک روی لینک داخل پاپ‌آپ (اختیاری)
+            // document.getElementById('close-popup').addEventListener('click', () => {
+            //     document.body.classList.remove('popup-active');
+            //     popupOverlay.style.display = 'none';
+            //     popupContainer.style.display = 'none';
+            // });
+
+
+
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById("button-daily").addEventListener("click", function() {
+              switchContent('daily');
+          });
+          
+          document.getElementById("button-partners").addEventListener("click", function() {
+              switchContent('partners');
+          });
+      });
+
+      function switchContent(type) {
+          var buttonDaily = document.getElementById("button-daily");
+          var buttonPartners = document.getElementById("button-partners");
+          var containerDaily = document.getElementById("container-daily");
+          var containerPartners = document.getElementById("container-partners");
+
+          if (type === 'daily') {
+              buttonDaily.className = "daily active";
+              buttonPartners.className = "partners inactive";
+              containerDaily.style.display = "flex";
+              containerPartners.style.display = "none";
+          } else {
+              buttonDaily.className = "daily inactive";
+              buttonPartners.className = "partners active";
+              containerDaily.style.display = "none";
+              containerPartners.style.display = "flex";
+          }
+      }
